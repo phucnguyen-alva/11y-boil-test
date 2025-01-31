@@ -1,7 +1,18 @@
 ---
+title: "Home"
 layout: layout.liquid
-title: 11ty Boilerplate
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Once Upon A Cosmo</h1>
+<img alt="pine" src="/images/pine.png" width="350" />
+
+<p>Welcome to the journal of a lone traveler in the cosmos, documenting first encounters, lost moments, and the vast silence of space.</p>
+
+<h3>Latest Logs</h3>
+<ul>
+  {% for post in collections.post %}
+    <ul>
+      <a href="{{ post.url }}">{{ post.data.title }}</a> - {{ post.date | date: "%B %d, %Y" }}
+    </ul>
+  {% endfor %}
+</ul>

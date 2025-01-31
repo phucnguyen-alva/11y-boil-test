@@ -1,50 +1,141 @@
-body {
-    font-family: Helvetica, sans-serif;
-    color: #EAE8FF;
-    background: #2D3142;
-    padding: 0 40px;
-    text-align: center;
+/* Import Space-Themed Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Universal Page Styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Main Body Styling */
+body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic Sci-Fi Font */
+    background-color: #1a1530; /* Deep Space Purple */
+    color: #e0d9ff; /* Cool Off-White */
+    text-align: center;
+    flex: 1; /* Allows the content to push the footer down */
+}
+
+/* Header & Footer Full Width */
+header, footer {
+    background-color: #2b1e40; /* Dark Purple */
+    padding: 15px 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Navigation Styling */
 nav {
-    margin: 40px auto 0 auto;
-    width: 250px;
-    border-radius: 50px;
-    background: #212431;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 nav ul {
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
     list-style-type: none;
-    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* Space between buttons */
 }
 
-nav ul li a {
-    display: inline-block;
-    padding: 20px;
-    color: #EAE8FF;
+/* Navigation Buttons */
+nav a {
+    color: #ff784f; /* Vibrant Orange */
     text-decoration: none;
-    font-size: 1.2em;
+    font-weight: 700;
+    font-size: 1.1em;
+    padding: 10px 20px;
+    background-color: rgba(255, 120, 79, 0.2); /* Semi-transparent button */
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    letter-spacing: 2px; /* Sci-Fi Text Effect */
+    text-transform: uppercase;
 }
 
-h1 {
-    font-size: 8em;
-    letter-spacing: -2px;
+/* Hover Effect for Navigation */
+nav a:hover {
+    color: #ff9a6c; /* Soft Orange Glow */
+    background-color: rgba(255, 120, 79, 0.4);
 }
 
-h1 strong {
-    background: rgb(34,193,195);
-    background: linear-gradient(45deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Headings - Sci-Fi Glow Effect */
+h1, h2 {
+    color: #c778dd; /* Electric Purple */
+    text-shadow: 2px 2px 20px rgba(199, 120, 221, 0.8); /* Glowing effect */
+    font-weight: 700;
 }
 
-img.about {
-    opacity: 0.5;
+/* Links */
+a {
+    color: #ff784f; /* Vibrant Orange */
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff9a6c; /* Soft Orange Glow */
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2b1e40; /* Dark Purple */
+    padding: 15px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto; /* Pushes footer to bottom */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+
+/* Images - Space Glow Effect */
+img {
+    filter: drop-shadow(0px 0px 10px rgba(255, 120, 79, 0.5)); /* Orange glow on images */
+}
+
+/* Center <h3> and <ul> */
+h3 {
+    text-align: center;
+    margin: 60px 0 0 0; /* Adds spacing for better readability */
+}
+
+/* Centering the <ul> list */
+ul {
+    padding: 0;
+    list-style-type: none;
+    text-align: center; /* Centers text inside the list */
+}
+
+/* Ensuring list items are centered properly */
+ul li {
+    display: inline-block; /* Keeps items in a neat row if needed */
+    margin: 10px 0; /* Space between list items */
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav a {
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }

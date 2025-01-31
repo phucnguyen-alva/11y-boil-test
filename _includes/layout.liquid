@@ -11,12 +11,21 @@ title: 11ty Boilerplate
   <link rel="stylesheet" href="/styles/screen.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="/" title="Go home">Home</a></li>
-      <li><a href="/about/" title="About the boilerplate">About</a></li>
-    </ul>
-  </nav>
+
+  <header>
+    <nav aria-label="Main Navigation">
+      <ul>
+        <li><a href="/" title="Go home">Home</a></li>
+        <li><a href="/about/" title="About this site">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
     {{ content }}
+  </main>
+
+  {% footer %}
+
 </body>
 </html>
